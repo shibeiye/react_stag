@@ -16,7 +16,7 @@ export default class List extends Component {
             <ul className="todo-main">
                 {
                     todos.map((todo)=>{
-                        return <Item key={todo.id} {...todo} updateTodo={updateTodo} deleteTodo={deleteTodo}></Item>
+                        return <Item key={todo.id} {...todo} updateTodo={updateTodo} deleteTodo={deleteTodo} ></Item>
                     })
                 }
          
