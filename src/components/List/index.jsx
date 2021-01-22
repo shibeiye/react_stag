@@ -10,7 +10,7 @@ export default class List extends Component {
     isLoading:false,//标识是否处于加载中
     err:''//储存请求相关的错误信息
   } 
-
+  // 订阅
   componentDidMount(){
     this.token = PubSub.subscribe('atguigu',(_,stateObj)=>{
       this.setState(stateObj)
