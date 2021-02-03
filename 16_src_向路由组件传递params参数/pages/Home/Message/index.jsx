@@ -18,17 +18,15 @@ export default class Message extends Component {
           {messageArr.map((messageObj) => {
             return (
               <li key={messageObj.id}>
-                {/* <Link to={`/home/message/detail/${messageObj.id}/${messageObj.title}`}>{messageObj.title}</Link> */}
-                {/* <Link to={`/home/message/detail/?id=${messageObj.id}&title=${messageObj.title}`}>{messageObj.title}</Link> */}
-                <Link to={{pathname:'/home/message/detail',state:{id:messageObj.id,title:messageObj.title}}}>{messageObj.title}</Link>
+                <Link to={`/home/message/detail/${messageObj.id}/${messageObj.title}`}>{messageObj.title}</Link>
+                
               </li>
             );
           })}
         </ul>
         <hr/>
         {/* 声明接收 */}
-        {/* <Route path="/home/message/detail/:id/:title" component={Detail}/> */}
-        <Route path="/home/message/detail" component={Detail}/>
+        <Route path="/home/message/detail/:id/:title" component={Detail}/>
       </div>
     );
   }
